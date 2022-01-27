@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang= "en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta hhtp-equiv="X-UA-Compatible" content="IE-edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="app.css" >
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <title>Membership Manager</title>
+    </head>
+    <body>
+        
+    <div class="bg-model">
+        <div class="model-content">
+            <div class="close">+</div>
+           <h1>Sign Up a New User</h1> 
+            <form id="adduser" action ="" method= "POST"> 
+                <div>
+                    <input type="text" id='id' name='id' placeholder="ID #"/>
+                </div>
+                <div>
+                    <input type="text" id='Name' name='Name' placeholder="Name"/>
+                </div>
+                <div>
+                    <input type="text" id='Phone' name='Phone' placeholder="Phone"/>
+                </div>
+                <div>
+                    <input type="text" id='Email' name='Email' placeholder="E-mail"/>
+                </div>
+                <div>
+                    <input type="text" id='Gender' name='Gender' placeholder="Gender"/>
+                </div>
+                <div>
+                    <input type="text" id='sub' name='sub' placeholder="Subscription Rnewal Date"/>
+                </div>
+                <button name="action" value="adduser" type="submit">Submit</button>
+            </form>
+        </div>                
+    </div>
+    
+    <div class="bg-model1">
+        <div class="model-content1">
+            <div class="close1">+</div>
+           <h1>Find & Replace</h1> 
+            <form id="findreplace" action ="" method= "POST"> 
+                <div>
+                    <input type="text" id='find' name='find' placeholder="Find"/>
+                </div>
+                <div>
+                    <input type="text" id='replace' name='replace' placeholder="Replace"/>
+                </div>
+                <button type="submit" name="action" value="findreplace">Submit</button>
+            </form>
+        </div>                
+    </div>
+    <div class="bg-model2">
+        <div class="model-content1">
+            <div class="close2">+</div>
+            <h1>Delete Row</h1> 
+            <form id="deleter" action ="" method= "POST"> 
+                <div>
+                    <input type="text" id='deleter' name='deleter' placeholder="Row(ID) # to delete"/>
+                </div>
+                <button type="submit" name="action"  value="deletr">Submit</button>
+            </form>
+        </div>                
+    </div>
+        <div class="sidebar bar-block collapse card animate-left" style="width: 170px;" id="mySidebar">
+            <img class="mlogo" src="/components/logo.png"></img>
+            <a href="/" id="btn-link4" class="bar-link button">Dashboard</a>
+            <button  id="btn"class="bar-item button">Add New User</button>
+            <button  id="btn-link2"class="bar-item button">Find & Replace</button>
+            <button id="btn-link3" class="bar-item button">Delete User</button>
+            <a href="/About" id="btn-link3" class="bar-link button">About</a>
+            <button class="bar-item button large hide-large" onclick="nav_close()">Close &times;</button>
+            <footer class="byali">Created and developed by Ali Kachef</footer>
+          </div>
+          <button class="button teal xlarge hide-large round" onclick="nav_open()">&#9776;</button>
+        <div class="main" style="margin-left: 200px;"> 
+            <div class="container">
+                        
+            <div class="teal">
+                <header class="header1">User Membership Manager</header>
+                <header class="header2">Using Google Sheets API</header>
+                <div class= "userCount">
+                    <div id="activeU" class="activeU"></div>
+                    <div id="unactiveU" class="unactiveU"></div>
+                    <div id="rnewalN" class="rnewalN"></div>
+                    <div id="totalU" class="totalU"></div>
+                </div>
+                <div class="card2 ">
+                    <input id="search-input" class="search-input" onkeyup="tableSearch()" type="text" placeholder="Search"/>
+                    <div class="selectB">
+                    <form >
+                        <select  id='selection'>
+                            <option value="Name">Name</option>
+                            <option value="Date">Date</option>
+                            <option value="Phone">Phone</option>
+                            <option value="Gender">Gender</option>
+                            <option value="Email">E-mail</option>
+                        </select>
+                    </form>
+                </div>
+                </div>
+                <div class="infocon">
+                
+                        <div class="table-refresh" data-url="/data" >
+                            <!--
+                            <table class="table-refresh__table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Age</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Dom</td>
+                                        <td>65</td>
+                                    </tr>
+                                    <tr>
+                                        <td>tom</td>
+                                        <td>25</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ali</td>
+                                        <td>78</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            -->
+                        </div>
+                        <div class="table-refresh__options">
+
+                        </div>
+                        <div class="infotabcon">
+                        <div class="infotab">
+                            <div class= "sheetinfo">
+                                <div id="sname" class="sname"></div>
+                                <div id="sowner" class="sowner"></div>
+                                <div id="shname" class="sversion"></div>
+                                <div id="sversion" class="shname"></div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                        
+                    </div>
+                </div>
+            </div>
+        <script src="app.js"></script>
+    </body>
+</html>
