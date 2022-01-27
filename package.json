@@ -1,14 +1,12 @@
 {
-  "homepage": "https://alikachef.github.io/Membership_manager",
+  
   "name": "video-request",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "predeploy": "npm run dist",
-    "deploy": "gh-pages -d Membership_manager",
-    "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
+   
   },
   "author": "",
   "license": "ISC",

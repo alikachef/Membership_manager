@@ -143,4 +143,5 @@ app.get("/data", async(req,res) =>{
 
 
 
-app.listen(1337, (req, res) => console.log("running on 1337"));
+//app.listen(1337, (req, res) => console.log("running on 1337"));
+app.listen(process.env.PORT || 3000, (req, res) => console.log("running on 1337"));
