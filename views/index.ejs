@@ -33,7 +33,7 @@
                 <div>
                     <input type="text" id='sub' name='sub' placeholder="Subscription Rnewal Date"/>
                 </div>
-                <button name="action" value="adduser" type="submit">Submit</button>
+                <button name="action" onclick="submit_btn()" value="adduser" type="submit">Submit</button>
             </form>
         </div>                
     </div>
@@ -49,7 +49,7 @@
                 <div>
                     <input type="text" id='replace' name='replace' placeholder="Replace"/>
                 </div>
-                <button type="submit" name="action" value="findreplace">Submit</button>
+                <button type="submit" onclick="submit_btn()" name="action" value="findreplace">Submit</button>
             </form>
         </div>                
     </div>
@@ -57,11 +57,11 @@
         <div class="model-content1">
             <div class="close2">+</div>
             <h1>Delete Row</h1> 
-            <form id="deleter" action ="" method= "POST"> 
+            <form  id="deleter" action ="" method= "POST"> 
                 <div>
                     <input type="text" id='deleter' name='deleter' placeholder="Row(ID) # to delete"/>
                 </div>
-                <button type="submit" name="action"  value="deletr">Submit</button>
+                <button type="submit" name="action" onclick="submit_btn()" value="deletr">Submit</button>
             </form>
         </div>                
     </div>

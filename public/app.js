@@ -28,10 +28,10 @@ async function updateTable(root){
   }
 
   
-  document.getElementById('sname').insertAdjacentHTML("beforeEnd",` <h6>Title</h6><p>${data.infoTab}</p>`);
-  document.getElementById('shname').insertAdjacentHTML("beforeEnd",` <h6>Sheet Name</h6><p>${data.sheetNameTab}</p>`);
-  document.getElementById('sowner').insertAdjacentHTML("beforeEnd",` <h6>Owner</h6><p>Ali Kachef</p>`);
-  document.getElementById('sversion').insertAdjacentHTML("beforeEnd",` <h6>Version</h6><p>${data.versionTab}</p>`);
+  document.getElementById('sname').innerHTML = ("beforeEnd",` <h6>Title</h6><p>${data.infoTab}</p>`);
+  document.getElementById('shname').innerHTML = ("beforeEnd",` <h6>Sheet Name</h6><p>${data.sheetNameTab}</p>`);
+  document.getElementById('sowner').innerHTML = ("beforeEnd",` <h6>Owner</h6><p>Ali Kachef</p>`);
+  document.getElementById('sversion').innerHTML = ("beforeEnd",` <h6>Version</h6><p>${data.versionTab}</p>`);
  
   tr = document.getElementsByTagName('tr');
   otp= new Date();
@@ -72,7 +72,8 @@ async function updateTable(root){
   }
   root.querySelector(".table-refresh__button").classList.add("table-refresh__button--refreshing");
   root.querySelector(".table-refresh__label").textContent = `Last Update: ${new Date(data.lastUpdate).toLocaleString()}`;
-  root.querySelector(".table-refresh__button").classList.remove("table-refresh__button--refreshing");                 
+  root.querySelector(".table-refresh__button").classList.remove("table-refresh__button--refreshing");         
+          
 }
 
 
@@ -187,7 +188,19 @@ async function updateTable(root){
           }    
         }
     }
-
+    
+    function submit_btn(){ 
+     
+      document.querySelector('.bg-model').style.display = 'none';
+        document.querySelector('.bg-model1').style.display = 'none';
+        document.querySelector('.bg-model2').style.display = 'none';
+        const timeout = setTimeout(updatet, 400);
+        function updatet() {
+          for (const root of document.querySelectorAll(".table-refresh[data-url]")){
+          updateTable(root);
+        }
+      }
+    }
 
     function nav_open() {
         document.getElementById("mySidebar").style.display = "block";
