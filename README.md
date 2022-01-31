@@ -3,6 +3,8 @@ About this App
 This Web app will transform your google spreadsheet to a fully functional app with interface to display, edit and manage your spreadsheet.
 this app uses JavaScript, Node Js, Express Js, and Google Sheets Api 
 
+live Demo https://membership-manager-googleshapi.herokuapp.com/
+
 ![](https://github.com/alikachef/Membership_manager/blob/master/public/components/GoogleRW.png)
 ![alt text](https://github.com/alikachef/Membership_manager/blob/master/public/components/Member%20ship%20manager.png)
 Turn Figure 1 into Figure 2
