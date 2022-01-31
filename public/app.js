@@ -194,7 +194,7 @@ async function updateTable(root){
       document.querySelector('.bg-model').style.display = 'none';
         document.querySelector('.bg-model1').style.display = 'none';
         document.querySelector('.bg-model2').style.display = 'none';
-        const timeout = setTimeout(updatet, 400);
+        const timeout = setTimeout(updatet, 500);
         function updatet() {
           for (const root of document.querySelectorAll(".table-refresh[data-url]")){
           updateTable(root);

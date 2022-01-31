@@ -56,10 +56,8 @@ app.post("/", async(req, res) => {
         resource: {
             values: [[id, Name, Phone, Email, Gender, sub]],
         },
-    });
-    res.render("index.ejs", { posts: updatedPosts });}catch (err) {
+    });}catch (err) {
         console.error(err);
-        res.render("index.ejs", { posts: updatedPosts });
       }
 
     const request ={
@@ -79,11 +77,9 @@ app.post("/", async(req, res) => {
     try{
     const response = (await googleSheets.spreadsheets.batchUpdate(request)).data;
     console.log(JSON.stringify(response,null, 2));
-    res.render("index.ejs", { posts: updatedPosts });
     } 
     catch(err){
         console.error(err)
-        res.render("index.ejs", { posts: updatedPosts });
     }
 
     const deleteR ={
@@ -95,12 +91,10 @@ app.post("/", async(req, res) => {
         console.log(rangeD);
         const response = (await googleSheets.spreadsheets.values.clear(deleteR)).data;
         console.log(JSON.stringify(response, null, 2));
-        res.render("index.ejs", { posts: updatedPosts });
       } catch (err) {
         console.error(err);
-        res.render("index.ejs", { posts: updatedPosts });
       }
-      res.render("index.ejs", { posts: updatedPosts });
+
 });
 
 app.get("/data", async(req,res) =>{
